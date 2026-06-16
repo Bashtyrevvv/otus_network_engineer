@@ -12,8 +12,12 @@
 ## Конфигурации
 - [R28](config/routers/R28.cfg) — PBR + IP SLA
 - [R27](config/routers/R27.cfg) — маршрут по-умолчанию
+- [R25](config/routers/R25.cfg) — Триада
+- [R26](config/routers/R26.cfg) — Триада
 
 ## Проверка
+```bash
 R28# show ip sla statistics
 R28# show route-map
 R28# show ip route
+R27# show ip route
