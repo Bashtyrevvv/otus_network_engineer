@@ -170,3 +170,7 @@ VPC1> ping 10.77.1.100
 
 # Пинг между офисами
 R12# ping 10.78.1.100
+## ✍️ Автор
+[Владимир Б.]
+## 📌 Ссылка на репозиторий
+[Посмотреть на GitHub](https://github.com/Bashtyrevvv/otus_network_engineer/tree/main/HomeLabs/Lab01)
