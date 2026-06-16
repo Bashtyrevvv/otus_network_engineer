@@ -170,7 +170,6 @@
 ---
 
 ## 📝 Документация
-- [Полное адресное пространство](addressing.md)
 - [VLAN Mapping](vlans/vlan_mapping.md)
 - [Настройка STP](SPAN_TREE.md)
 - [Конфигурации устройств](config/)
