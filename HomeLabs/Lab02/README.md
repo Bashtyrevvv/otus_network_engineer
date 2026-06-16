@@ -9,6 +9,9 @@
 3. Настроить отслеживание линка через технологию IP SLA
 4. Настроить для офиса Лабытнанги маршрут по-умолчанию
 
+## Топология
+[Текстовая схема PBR](images/pbr.txt)
+
 ## Конфигурации
 - [R28](config/routers/R28.cfg) — PBR + IP SLA
 - [R27](config/routers/R27.cfg) — маршрут по-умолчанию
@@ -21,3 +24,4 @@ R28# show ip sla statistics
 R28# show route-map
 R28# show ip route
 R27# show ip route
+
