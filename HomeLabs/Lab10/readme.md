@@ -1,6 +1,3 @@
-cd ~/otus_network_engineer/HomeLabs/Lab10
-
-cat > README.md << 'EOF'
 # 🌐 Лабораторная работа №10 — Основные протоколы сети интернет
 
 ## 🎯 Цель работы
