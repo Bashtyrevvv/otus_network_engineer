@@ -92,9 +92,10 @@
 
 ---
 
-## 🔧 Проверка
+### 🔧 Проверка
 
-`# eBGP IPv6 соседи
+```bash
+# eBGP IPv6 соседи
 R14# show bgp ipv6 unicast summary
 R18# show bgp ipv6 unicast summary
 
