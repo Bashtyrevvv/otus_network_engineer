@@ -1,4 +1,4 @@
-cat > Lab12/README.md << 'EOF'
+cat > README.md << 'EOF'
 # 🌐 Лабораторная работа №12 — Базовый сервис MPLS
 
 ## 🎯 Цель работы
@@ -61,19 +61,14 @@ OSPF анонсирует Loopback PE через MPLS-сеть.
 
 ### Шаг 3. Настройка LDP на всех MPLS-интерфейсах
 
-```bash
-mpls ip
-mpls ldp router-id Loopback0 force
-
-
-Шаг 4. Настройка MP-BGP между PE
+### Шаг 4. Настройка MP-BGP между PE
 PE	AS	Соседи
 R14 (Москва)	1001	R15 (iBGP), R18 (eBGP)
 R15 (Москва)	1001	R14 (iBGP), R18 (eBGP)
 R18 (СПб)	2042	R14, R15 (eBGP)
 
 
-📁 Конфигурации
+### 📁 Конфигурации
 Устройство	Файл	Роль
 R14	config/routers/R14.cfg	PE Москва
 R15	config/routers/R15.cfg	PE Москва
@@ -86,8 +81,14 @@ R21	config/routers/R21.cfg	P/PE Ламас
 R22	config/routers/R22.cfg	P/PE Киторн
 
 
- 🔧Проверка работоспособности
+```bash
+mpls ip
+mpls ldp router-id Loopback0 force
 
+
+
+🔧 Проверка работоспособности
+bash
 # Проверка LDP соседей
 R14# show mpls ldp neighbor
 R23# show mpls ldp neighbor
@@ -106,7 +107,6 @@ R18# ping 10.77.0.254 source 10.78.0.254
 # Проверка маршрутов на P-роутере (не должно быть BGP)
 R23# show ip route
 # Должны быть только OSPF и Connected
-
 
 
 📌 Автор: Баштырев В.
