@@ -94,8 +94,7 @@
 
 ## 🔧 Проверка
 
-```bash
-# eBGP IPv6 соседи
+`# eBGP IPv6 соседи
 R14# show bgp ipv6 unicast summary
 R18# show bgp ipv6 unicast summary
 
@@ -113,21 +112,7 @@ R18# ping 2001:1001:77::254
 
 ---
 
-✅ Критерии оценки
-Критерий	Статус
-eBGP IPv6 Москва → Киторн	✅
-eBGP IPv6 Москва → Ламас	✅
-eBGP IPv6 Киторн ↔ Ламас	✅
-eBGP IPv6 Ламас ↔ Триада	✅
-eBGP IPv6 СПб → Триада	✅
-IPv6 связность Москва ↔ СПб	✅
-iBGP IPv6 в Москве	✅
-iBGP IPv6 в Триаде (RR)	✅
-
-
----
-
-📌 **Автор:** Баштырев В.  
+--📌 **Автор:** Баштырев В.  
 📅 **Дата:** 2026  
 🏫 **Курс:** Otus Network Engineer  
 📚 **Лабораторная работа №9** — BGP для маршрутизации IPv6 unicast
