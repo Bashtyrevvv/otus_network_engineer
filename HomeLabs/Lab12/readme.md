@@ -68,7 +68,7 @@ R15 (Москва)	1001	R14 (iBGP), R18 (eBGP)
 R18 (СПб)	2042	R14, R15 (eBGP)
 
 
-### 📁 Конфигурации
+📁 Конфигурации
 Устройство	Файл	Роль
 R14	config/routers/R14.cfg	PE Москва
 R15	config/routers/R15.cfg	PE Москва
@@ -79,11 +79,6 @@ R25	config/routers/R25.cfg	P Триада
 R26	config/routers/R26.cfg	P Триада
 R21	config/routers/R21.cfg	P/PE Ламас
 R22	config/routers/R22.cfg	P/PE Киторн
-
-
-```bash
-mpls ip
-mpls ldp router-id Loopback0 force
 
 
 
