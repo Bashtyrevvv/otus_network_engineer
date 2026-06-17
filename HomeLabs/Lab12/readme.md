@@ -60,30 +60,38 @@ cat > README.md << 'EOF'
 OSPF анонсирует Loopback PE через MPLS-сеть.
 
 ### Шаг 3. Настройка LDP на всех MPLS-интерфейсах
+mpls ip
+mpls ldp router-id Loopback0 force
 
 ### Шаг 4. Настройка MP-BGP между PE
-PE	AS	Соседи
-R14 (Москва)	1001	R15 (iBGP), R18 (eBGP)
-R15 (Москва)	1001	R14 (iBGP), R18 (eBGP)
-R18 (СПб)	2042	R14, R15 (eBGP)
 
+| PE | AS | Соседи |
+|----|-----|--------|
+| R14 (Москва) | 1001 | R15 (iBGP), R18 (eBGP) |
+| R15 (Москва) | 1001 | R14 (iBGP), R18 (eBGP) |
+| R18 (СПб) | 2042 | R14, R15 (eBGP) |
 
-📁 Конфигурации
-Устройство	Файл	Роль
-R14	config/routers/R14.cfg	PE Москва
-R15	config/routers/R15.cfg	PE Москва
-R18	config/routers/R18.cfg	PE СПб
-R23	config/routers/R23.cfg	P Триада
-R24	config/routers/R24.cfg	P Триада
-R25	config/routers/R25.cfg	P Триада
-R26	config/routers/R26.cfg	P Триада
-R21	config/routers/R21.cfg	P/PE Ламас
-R22	config/routers/R22.cfg	P/PE Киторн
+---
 
+## 📁 Конфигурации
 
+| Устройство | Файл | Роль |
+|------------|------|------|
+| **R14** | [config/routers/R14.cfg](config/routers/R14.cfg) | PE Москва |
+| **R15** | [config/routers/R15.cfg](config/routers/R15.cfg) | PE Москва |
+| **R18** | [config/routers/R18.cfg](config/routers/R18.cfg) | PE СПб |
+| **R23** | [config/routers/R23.cfg](config/routers/R23.cfg) | P Триада |
+| **R24** | [config/routers/R24.cfg](config/routers/R24.cfg) | P Триада |
+| **R25** | [config/routers/R25.cfg](config/routers/R25.cfg) | P Триада |
+| **R26** | [config/routers/R26.cfg](config/routers/R26.cfg) | P Триада |
+| **R21** | [config/routers/R21.cfg](config/routers/R21.cfg) | P/PE Ламас |
+| **R22** | [config/routers/R22.cfg](config/routers/R22.cfg) | P/PE Киторн |
 
-🔧 Проверка работоспособности
-bash
+---
+
+## 🔧 Проверка работоспособности
+
+```bash
 # Проверка LDP соседей
 R14# show mpls ldp neighbor
 R23# show mpls ldp neighbor
