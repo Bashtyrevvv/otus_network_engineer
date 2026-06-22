@@ -102,10 +102,10 @@ interface Tunnel100
 
 | **Устройство** | **Файл** | **Роль** |
 |----------------|----------|----------|
-| **R15** | [**config/routers/R15.cfg**](config/routers/R15.cfg) | **HUB** + CA + DMVPN + GRE + IPSec |
-| **R18** | [**config/routers/R18.cfg**](config/routers/R18.cfg) | **GRE** + IPSec |
-| **R28** | [**config/routers/R28.cfg**](config/routers/R28.cfg) | **DMVPN** + IPSec |
-| **R27** | [**config/routers/R27.cfg**](config/routers/R27.cfg) | **DMVPN** + IPSec |
+| **R15** | [`config/routers/R15.cfg`](config/routers/R15.cfg) | **HUB** + CA + DMVPN + GRE + IPSec |
+| **R18** | [`config/routers/R18.cfg`](config/routers/R18.cfg) | **GRE** + IPSec |
+| **R28** | [`config/routers/R28.cfg`](config/routers/R28.cfg) | **DMVPN** + IPSec |
+| **R27** | [`config/routers/R27.cfg`](config/routers/R27.cfg) | **DMVPN** + IPSec |
 
 ---
 
