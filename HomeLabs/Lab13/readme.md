@@ -52,18 +52,19 @@
 
 ---
 
-
 ## 🔧 Пошаговый план выполнения
 
 ```bash
 
-Шаг 1. Настройка PKI (CA) на R15
+### Шаг 1. Настройка PKI (CA) на R15
+
 crypto pki server CA
  database url flash:
  grant auto
  no shutdown
 
-Шаг 2. Настройка Trustpoints на всех устройствах
+### Шаг 2. Настройка Trustpoints на всех устройствах
+
 crypto pki trustpoint CA
  enrollment url http://10.77.0.253:80
  serial-number none
@@ -71,7 +72,8 @@ crypto pki trustpoint CA
  revocation-check none
  rsakeypair CA
 
-Шаг 3. Настройка ISAKMP политики
+### Шаг 3. Настройка ISAKMP политики
+
 crypto isakmp policy 10
  encr aes 256
  hash sha
@@ -79,21 +81,20 @@ crypto isakmp policy 10
  group 14
  lifetime 86400
 
-Шаг 4. Настройка IPSec Transform-set и Profile
+### Шаг 4. Настройка IPSec Transform-set и Profile
+
 crypto ipsec transform-set TRANSFORM-SET esp-aes 256 esp-sha-hmac
  mode tunnel
 !
 crypto ipsec profile IPSEC-PROF
  set transform-set TRANSFORM-SET
  set pfs group14
- grant auto
- no shutdown
 
-Шаг 5. Применение IPSec к туннелям
+###  Шаг 5. Применение IPSec к туннелям
+
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
 
-EOF
 ---
 
 ## 📁 Конфигурации
@@ -107,28 +108,7 @@ EOF
 
 ---
 
-
-### 🔧 Проверка работоспособности
-
-# Проверка PKI и сертификатов
-R15# show crypto pki certificates
-R15# show crypto pki server CA status
-
-# Проверка IPSec SA
-R15# show crypto ipsec sa
-R15# show crypto isakmp sa
-
-# Проверка туннелей
-R15# show ip interface brief | include Tunnel
-R15# show dmvpn
-
-# Проверка связности
-R15# ping 172.16.0.2
-R15# ping 172.16.1.1
-R15# ping 172.16.1.2
-R28# ping 172.16.1.2   # Spoke-to-Spoke
-
 📌 Автор: Баштырев В.
 📅 Дата: 2026
 📚 Лабораторная работа №13 — IPSec over DMVPN
-
+EOF
