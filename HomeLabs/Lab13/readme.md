@@ -52,28 +52,18 @@
 
 ---
 
-## 📁 Конфигурации
-
-| **Устройство** | **Файл** | **Роль** |
-|----------------|----------|----------|
-| **R15** | [`config/routers/R15.cfg`](config/routers/R15.cfg) | **HUB** + CA + DMVPN + GRE + IPSec |
-| **R18** | [`config/routers/R18.cfg`](config/routers/R18.cfg) | **GRE** + IPSec |
-| **R28** | [`config/routers/R28.cfg`](config/routers/R28.cfg) | **DMVPN** + IPSec |
-| **R27** | [`config/routers/R27.cfg`](config/routers/R27.cfg) | **DMVPN** + IPSec |
-
----
 
 ## 🔧 Пошаговый план выполнения
 
-Шаг 1. Настройка PKI (CA) на R15
+```bash
 
+Шаг 1. Настройка PKI (CA) на R15
 crypto pki server CA
  database url flash:
  grant auto
  no shutdown
 
 Шаг 2. Настройка Trustpoints на всех устройствах
-
 crypto pki trustpoint CA
  enrollment url http://10.77.0.253:80
  serial-number none
@@ -82,7 +72,6 @@ crypto pki trustpoint CA
  rsakeypair CA
 
 Шаг 3. Настройка ISAKMP политики
-
 crypto isakmp policy 10
  encr aes 256
  hash sha
@@ -91,7 +80,6 @@ crypto isakmp policy 10
  lifetime 86400
 
 Шаг 4. Настройка IPSec Transform-set и Profile
-
 crypto ipsec transform-set TRANSFORM-SET esp-aes 256 esp-sha-hmac
  mode tunnel
 !
@@ -102,10 +90,10 @@ crypto ipsec profile IPSEC-PROF
  no shutdown
 
 Шаг 5. Применение IPSec к туннелям
-
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
 
+EOF
 ---
 
 ## 📁 Конфигурации
