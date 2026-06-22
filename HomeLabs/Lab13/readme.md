@@ -56,14 +56,14 @@
 
 ```bash
 
-### Шаг 1. Настройка PKI (CA) на R15
+Шаг 1. Настройка PKI (CA) на R15
 
 crypto pki server CA
  database url flash:
  grant auto
  no shutdown
 
-### Шаг 2. Настройка Trustpoints на всех устройствах
+Шаг 2. Настройка Trustpoints на всех устройствах
 
 crypto pki trustpoint CA
  enrollment url http://10.77.0.253:80
@@ -72,7 +72,7 @@ crypto pki trustpoint CA
  revocation-check none
  rsakeypair CA
 
-### Шаг 3. Настройка ISAKMP политики
+Шаг 3. Настройка ISAKMP политики
 
 crypto isakmp policy 10
  encr aes 256
@@ -81,7 +81,7 @@ crypto isakmp policy 10
  group 14
  lifetime 86400
 
-### Шаг 4. Настройка IPSec Transform-set и Profile
+Шаг 4. Настройка IPSec Transform-set и Profile
 
 crypto ipsec transform-set TRANSFORM-SET esp-aes 256 esp-sha-hmac
  mode tunnel
@@ -90,10 +90,11 @@ crypto ipsec profile IPSEC-PROF
  set transform-set TRANSFORM-SET
  set pfs group14
 
-###  Шаг 5. Применение IPSec к туннелям
+Шаг 5. Применение IPSec к туннелям
 
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
+EOF
 
 ---
 
@@ -111,4 +112,4 @@ interface Tunnel100
 📌 Автор: Баштырев В.
 📅 Дата: 2026
 📚 Лабораторная работа №13 — IPSec over DMVPN
-EOF
+
