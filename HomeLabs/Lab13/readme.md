@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # 🌐 Лабораторная работа №13 — IPSec over DMVPN
 
 ## 🎯 Цель работы
@@ -97,13 +96,14 @@ crypto ipsec profile IPSEC-PROF
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
 
-📁 Конфигурации
+## 📁 Конфигурации
 
-Устройство	Файл	Роль
-R15	config/routers/R15.cfg	HUB + CA + DMVPN + GRE + IPSec
-R18	config/routers/R18.cfg	GRE + IPSec
-R28	config/routers/R28.cfg	DMVPN + IPSec
-R27	config/routers/R27.cfg	DMVPN + IPSec
+| **Устройство** | **Файл** | **Роль** |
+|----------------|----------|----------|
+| **R15** | [**config/routers/R15.cfg**](config/routers/R15.cfg) | **HUB** + CA + DMVPN + GRE + IPSec |
+| **R18** | [**config/routers/R18.cfg**](config/routers/R18.cfg) | **GRE** + IPSec |
+| **R28** | [**config/routers/R28.cfg**](config/routers/R28.cfg) | **DMVPN** + IPSec |
+| **R27** | [**config/routers/R27.cfg**](config/routers/R27.cfg) | **DMVPN** + IPSec |
 
 
 🔧 Проверка работоспособности
