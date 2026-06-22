@@ -54,8 +54,6 @@
 
 ## 🔧 Пошаговый план выполнения
 
-```bash
-
 Шаг 1. Настройка PKI (CA) на R15
 
 crypto pki server CA
@@ -94,7 +92,7 @@ crypto ipsec profile IPSEC-PROF
 
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
-EOF
+
 
 ---
 
@@ -112,4 +110,4 @@ EOF
 📌 Автор: Баштырев В.
 📅 Дата: 2026
 📚 Лабораторная работа №13 — IPSec over DMVPN
-
+EOF
