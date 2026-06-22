@@ -96,7 +96,8 @@ crypto ipsec profile IPSEC-PROF
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
 
-## 📁 Конфигурации
+
+### 📁 Конфигурации
 
 | **Устройство** | **Файл** | **Роль** |
 |----------------|----------|----------|
@@ -129,4 +130,4 @@ R28# ping 172.16.1.2   # Spoke-to-Spoke
 📌 Автор: Баштырев В.
 📅 Дата: 2026
 📚 Лабораторная работа №13 — IPSec over DMVPN
-EOF
+
