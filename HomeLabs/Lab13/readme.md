@@ -108,6 +108,7 @@ interface Tunnel100
 | **R27** | [**config/routers/R27.cfg**](config/routers/R27.cfg) | **DMVPN** + IPSec |
 
 ---
+
 🔧 Проверка работоспособности
 
 # Проверка PKI и сертификатов
