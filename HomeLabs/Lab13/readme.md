@@ -73,7 +73,7 @@ crypto pki server CA
  grant auto
  no shutdown
 
-Шаг 2. Настройка Trustpoints на всех устройствах
+### Шаг 2. Настройка Trustpoints на всех устройствах
 
 crypto pki trustpoint CA
  enrollment url http://10.77.0.253:80
@@ -82,7 +82,7 @@ crypto pki trustpoint CA
  revocation-check none
  rsakeypair CA
 
-Шаг 3. Настройка ISAKMP политики
+### Шаг 3. Настройка ISAKMP политики
 
 crypto isakmp policy 10
  encr aes 256
@@ -91,7 +91,7 @@ crypto isakmp policy 10
  group 14
  lifetime 86400
 
-Шаг 4. Настройка IPSec Transform-set и Profile
+### Шаг 4. Настройка IPSec Transform-set и Profile
 
 crypto ipsec transform-set TRANSFORM-SET esp-aes 256 esp-sha-hmac
  mode tunnel
@@ -102,13 +102,13 @@ crypto ipsec profile IPSEC-PROF
  grant auto
  no shutdown
 
-Шаг 5. Применение IPSec к туннелям
+### Шаг 5. Применение IPSec к туннелям
 
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
 
 
-🔧 Проверка работоспособности
+### 🔧 Проверка работоспособности
 
 # Проверка PKI и сертификатов
 R15# show crypto pki certificates
