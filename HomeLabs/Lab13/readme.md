@@ -110,4 +110,3 @@ interface Tunnel100
 📌 Автор: Баштырев В.
 📅 Дата: 2026
 📚 Лабораторная работа №13 — IPSec over DMVPN
-EOF
