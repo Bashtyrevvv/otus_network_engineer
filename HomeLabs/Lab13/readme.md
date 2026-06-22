@@ -96,6 +96,7 @@ crypto ipsec profile IPSEC-PROF
 interface Tunnel100
  tunnel protection ipsec profile IPSEC-PROF
 
+---
 
 ## 📁 Конфигурации
 
@@ -106,7 +107,7 @@ interface Tunnel100
 | **R28** | [**config/routers/R28.cfg**](config/routers/R28.cfg) | **DMVPN** + IPSec |
 | **R27** | [**config/routers/R27.cfg**](config/routers/R27.cfg) | **DMVPN** + IPSec |
 
-
+---
 🔧 Проверка работоспособности
 
 # Проверка PKI и сертификатов
